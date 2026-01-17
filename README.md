@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor Solution](https://www.frontendmentor.io/)
+- Solution URL: [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/responsive-faq-accordion-jUAvEmRfdG)
 - Live Site URL: [View Live Demo](https://izhal27.github.io/faq-accordion/)
 
 ## My process
