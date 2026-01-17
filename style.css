@@ -1,0 +1,157 @@
+:root {
+  --purple-100: hsl(275, 100%, 97%);
+  --purple-600: hsl(292, 16%, 49%);
+  --purple-950: hsl(292, 42%, 14%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans", Courier, monospace;
+  background: url("./assets/images/background-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
+  background-color: #f9eeff;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accordion {
+  max-width: 327px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  box-shadow: 0 4px 20px 10px hsl(292, 16%, 49%, 0.15);
+}
+
+.accordion-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.accordion-title h2 {
+  color: var(--purple-950);
+}
+
+.accordion-container {
+  padding: 1.3rem 0;
+}
+
+.accordion-container:not(:last-child) {
+  border-bottom: 1px solid var(--purple-100);
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.accordion-header h3 {
+  font-size: 0.8rem;
+  color: var(--purple-950);
+  font-size: 1rem;
+
+  transition: color 0.3s ease-out;
+  -webkit-transition: color 0.3s ease-out;
+  -moz-transition: color 0.3s ease-out;
+  -ms-transition: color 0.3s ease-out;
+  -o-transition: color 0.3s ease-out;
+}
+
+.accordion-header:hover h3 {
+  color: #b528f1;
+}
+
+.accordion-desc {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  color: var(--purple-600);
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out,
+    margin-top 0.3s ease-out;
+  -webkit-transition: max-height 0.3s ease-out, opacity 0.3s ease-out,
+    margin-top 0.3s ease-out;
+  -moz-transition: max-height 0.3s ease-out, opacity 0.3s ease-out,
+    margin-top 0.3s ease-out;
+  -ms-transition: max-height 0.3s ease-out, opacity 0.3s ease-out,
+    margin-top 0.3s ease-out;
+  -o-transition: max-height 0.3s ease-out, opacity 0.3s ease-out,
+    margin-top 0.3s ease-out;
+}
+
+.active {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  pointer-events: none;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+
+  transition: transform 0.3s ease-out;
+  -webkit-transition: transform 0.3s ease-out;
+  -moz-transition: transform 0.3s ease-out;
+  -ms-transition: transform 0.3s ease-out;
+  -o-transition: transform 0.3s ease-out;
+}
+
+.toggle-btn:hover .icon {
+  transform: scale(1.1);
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background: url("./assets/images/background-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-color: #f9eeff;
+  }
+
+  .accordion {
+    max-width: 600px;
+  }
+
+  .accordion-title h2 {
+    font-size: 3rem;
+  }
+
+  .accordion-header h3 {
+    font-size: 1.15rem;
+  }
+
+  .accordion-desc {
+    font-size: 1.15rem;
+  }
+}
